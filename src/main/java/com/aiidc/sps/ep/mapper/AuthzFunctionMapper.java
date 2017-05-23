@@ -1,7 +1,7 @@
 package com.aiidc.sps.ep.mapper;
 
 import com.aiidc.sps.ep.entity.AuthzFunction;
-import com.aiidc.sps.ep.utils.JasonMapper;
+import com.aiidc.sps.ep.util.JasonMapper;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Result;

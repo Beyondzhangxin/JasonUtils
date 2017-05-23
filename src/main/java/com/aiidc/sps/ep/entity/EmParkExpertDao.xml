@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.aiidc.sps.ep.entity.EmParkExpertDao">
+    <!--auto generated Code-->
+    <resultMap id="AllColumnMap" type="com.aiidc.sps.ep.entity.EmParkExpert">
+        <result column="expert_id" property="expertId"/>
+        <result column="expert_type" property="expertType"/>
+        <result column="name" property="name"/>
+        <result column="sex" property="sex"/>
+        <result column="birthday" property="birthday"/>
+        <result column="nation_code" property="nationCode"/>
+        <result column="area_id" property="areaId"/>
+        <result column="event_type_id" property="eventTypeId"/>
+        <result column="political_outlook" property="politicalOutlook"/>
+        <result column="place_of_origin" property="placeOfOrigin"/>
+        <result column="domicile" property="domicile"/>
+        <result column="major" property="major"/>
+        <result column="highest_education" property="highestEducation"/>
+        <result column="work_unit" property="workUnit"/>
+        <result column="unit_addr" property="unitAddr"/>
+        <result column="university" property="university"/>
+        <result column="working_time" property="workingTime"/>
+        <result column="post" property="post"/>
+        <result column="title" property="title"/>
+        <result column="specialty" property="specialty"/>
+        <result column="office_phone" property="officePhone"/>
+        <result column="email" property="email"/>
+        <result column="fax" property="fax"/>
+        <result column="mobile_phone" property="mobilePhone"/>
+        <result column="home_phone" property="homePhone"/>
+        <result column="home_addr" property="homeAddr"/>
+        <result column="change_date" property="changeDate"/>
+        <result column="part_in_inci_handling" property="partInInciHandling"/>
+    </resultMap>
+
+    <!--auto generated Code-->
+    <sql id="all_column">
+        expert_id,
+        expert_type,
+        name,
+        sex,
+        birthday,
+        nation_code,
+        area_id,
+        event_type_id,
+        political_outlook,
+        place_of_origin,
+        domicile,
+        major,
+        highest_education,
+        work_unit,
+        unit_addr,
+        university,
+        working_time,
+        post,
+        title,
+        specialty,
+        office_phone,
+        email,
+        fax,
+        mobile_phone,
+        home_phone,
+        home_addr,
+        change_date,
+        part_in_inci_handling
+    </sql>
+
+    <!--auto generated Code-->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="pojo.expertId">
+        INSERT INTO em_park_expert (
+            expert_id,
+            expert_type,
+            name,
+            sex,
+            birthday,
+            nation_code,
+            area_id,
+            event_type_id,
+            political_outlook,
+            place_of_origin,
+            domicile,
+            major,
+            highest_education,
+            work_unit,
+            unit_addr,
+            university,
+            working_time,
+            post,
+            title,
+            specialty,
+            office_phone,
+            email,
+            fax,
+            mobile_phone,
+            home_phone,
+            home_addr,
+            change_date,
+            part_in_inci_handling
+        ) VALUES (
+            #{pojo.expertId,jdbcType=VARCHAR},
+            #{pojo.expertType},
+            #{pojo.name},
+            #{pojo.sex},
+            #{pojo.birthday},
+            #{pojo.nationCode},
+            #{pojo.areaId},
+            #{pojo.eventTypeId},
+            #{pojo.politicalOutlook},
+            #{pojo.placeOfOrigin},
+            #{pojo.domicile},
+            #{pojo.major},
+            #{pojo.highestEducation},
+            #{pojo.workUnit},
+            #{pojo.unitAddr},
+            #{pojo.university},
+            #{pojo.workingTime},
+            #{pojo.post},
+            #{pojo.title},
+            #{pojo.specialty},
+            #{pojo.officePhone},
+            #{pojo.email},
+            #{pojo.fax},
+            #{pojo.mobilePhone},
+            #{pojo.homePhone},
+            #{pojo.homeAddr},
+            #{pojo.changeDate},
+            #{pojo.partInInciHandling}
+        )
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertSelective" useGeneratedKeys="true" keyProperty="pojo.expertId">
+        INSERT INTO em_park_expert
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.expertId!=null"> expert_id,</if>
+            <if test="pojo.expertType!=null"> expert_type,</if>
+            <if test="pojo.name!=null"> name,</if>
+            <if test="pojo.sex!=null"> sex,</if>
+            <if test="pojo.birthday!=null"> birthday,</if>
+            <if test="pojo.nationCode!=null"> nation_code,</if>
+            <if test="pojo.areaId!=null"> area_id,</if>
+            <if test="pojo.eventTypeId!=null"> event_type_id,</if>
+            <if test="pojo.politicalOutlook!=null"> political_outlook,</if>
+            <if test="pojo.placeOfOrigin!=null"> place_of_origin,</if>
+            <if test="pojo.domicile!=null"> domicile,</if>
+            <if test="pojo.major!=null"> major,</if>
+            <if test="pojo.highestEducation!=null"> highest_education,</if>
+            <if test="pojo.workUnit!=null"> work_unit,</if>
+            <if test="pojo.unitAddr!=null"> unit_addr,</if>
+            <if test="pojo.university!=null"> university,</if>
+            <if test="pojo.workingTime!=null"> working_time,</if>
+            <if test="pojo.post!=null"> post,</if>
+            <if test="pojo.title!=null"> title,</if>
+            <if test="pojo.specialty!=null"> specialty,</if>
+            <if test="pojo.officePhone!=null"> office_phone,</if>
+            <if test="pojo.email!=null"> email,</if>
+            <if test="pojo.fax!=null"> fax,</if>
+            <if test="pojo.mobilePhone!=null"> mobile_phone,</if>
+            <if test="pojo.homePhone!=null"> home_phone,</if>
+            <if test="pojo.homeAddr!=null"> home_addr,</if>
+            <if test="pojo.changeDate!=null"> change_date,</if>
+            <if test="pojo.partInInciHandling!=null"> part_in_inci_handling,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.expertId!=null">#{pojo.expertId,jdbcType=VARCHAR},</if>
+            <if test="pojo.expertType!=null">#{pojo.expertType},</if>
+            <if test="pojo.name!=null">#{pojo.name},</if>
+            <if test="pojo.sex!=null">#{pojo.sex},</if>
+            <if test="pojo.birthday!=null">#{pojo.birthday},</if>
+            <if test="pojo.nationCode!=null">#{pojo.nationCode},</if>
+            <if test="pojo.areaId!=null">#{pojo.areaId},</if>
+            <if test="pojo.eventTypeId!=null">#{pojo.eventTypeId},</if>
+            <if test="pojo.politicalOutlook!=null">#{pojo.politicalOutlook},</if>
+            <if test="pojo.placeOfOrigin!=null">#{pojo.placeOfOrigin},</if>
+            <if test="pojo.domicile!=null">#{pojo.domicile},</if>
+            <if test="pojo.major!=null">#{pojo.major},</if>
+            <if test="pojo.highestEducation!=null">#{pojo.highestEducation},</if>
+            <if test="pojo.workUnit!=null">#{pojo.workUnit},</if>
+            <if test="pojo.unitAddr!=null">#{pojo.unitAddr},</if>
+            <if test="pojo.university!=null">#{pojo.university},</if>
+            <if test="pojo.workingTime!=null">#{pojo.workingTime},</if>
+            <if test="pojo.post!=null">#{pojo.post},</if>
+            <if test="pojo.title!=null">#{pojo.title},</if>
+            <if test="pojo.specialty!=null">#{pojo.specialty},</if>
+            <if test="pojo.officePhone!=null">#{pojo.officePhone},</if>
+            <if test="pojo.email!=null">#{pojo.email},</if>
+            <if test="pojo.fax!=null">#{pojo.fax},</if>
+            <if test="pojo.mobilePhone!=null">#{pojo.mobilePhone},</if>
+            <if test="pojo.homePhone!=null">#{pojo.homePhone},</if>
+            <if test="pojo.homeAddr!=null">#{pojo.homeAddr},</if>
+            <if test="pojo.changeDate!=null">#{pojo.changeDate},</if>
+            <if test="pojo.partInInciHandling!=null">#{pojo.partInInciHandling},</if>
+        </trim>
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertList">
+        INSERT ALL
+        <foreach collection="pojos" item="pojo">
+            INTO em_park_expert (
+            <include refid="all_column"/>
+            )VALUES(
+                #{pojo.expertId,jdbcType=VARCHAR},
+                #{pojo.expertType},
+                #{pojo.name},
+                #{pojo.sex},
+                #{pojo.birthday},
+                #{pojo.nationCode},
+                #{pojo.areaId},
+                #{pojo.eventTypeId},
+                #{pojo.politicalOutlook},
+                #{pojo.placeOfOrigin},
+                #{pojo.domicile},
+                #{pojo.major},
+                #{pojo.highestEducation},
+                #{pojo.workUnit},
+                #{pojo.unitAddr},
+                #{pojo.university},
+                #{pojo.workingTime},
+                #{pojo.post},
+                #{pojo.title},
+                #{pojo.specialty},
+                #{pojo.officePhone},
+                #{pojo.email},
+                #{pojo.fax},
+                #{pojo.mobilePhone},
+                #{pojo.homePhone},
+                #{pojo.homeAddr},
+                #{pojo.changeDate},
+                #{pojo.partInInciHandling}
+            )
+        </foreach>
+        select * from dual
+    </insert>
+
+    <!--auto generated Code-->
+    <update id="update">
+        UPDATE em_park_expert
+        <set>
+            <if test="pojo.expertId != null"> expert_id = #{pojo.expertId}, </if>
+            <if test="pojo.expertType != null"> expert_type = #{pojo.expertType}, </if>
+            <if test="pojo.name != null"> name = #{pojo.name}, </if>
+            <if test="pojo.sex != null"> sex = #{pojo.sex}, </if>
+            <if test="pojo.birthday != null"> birthday = #{pojo.birthday}, </if>
+            <if test="pojo.nationCode != null"> nation_code = #{pojo.nationCode}, </if>
+            <if test="pojo.areaId != null"> area_id = #{pojo.areaId}, </if>
+            <if test="pojo.eventTypeId != null"> event_type_id = #{pojo.eventTypeId}, </if>
+            <if test="pojo.politicalOutlook != null"> political_outlook = #{pojo.politicalOutlook}, </if>
+            <if test="pojo.placeOfOrigin != null"> place_of_origin = #{pojo.placeOfOrigin}, </if>
+            <if test="pojo.domicile != null"> domicile = #{pojo.domicile}, </if>
+            <if test="pojo.major != null"> major = #{pojo.major}, </if>
+            <if test="pojo.highestEducation != null"> highest_education = #{pojo.highestEducation}, </if>
+            <if test="pojo.workUnit != null"> work_unit = #{pojo.workUnit}, </if>
+            <if test="pojo.unitAddr != null"> unit_addr = #{pojo.unitAddr}, </if>
+            <if test="pojo.university != null"> university = #{pojo.university}, </if>
+            <if test="pojo.workingTime != null"> working_time = #{pojo.workingTime}, </if>
+            <if test="pojo.post != null"> post = #{pojo.post}, </if>
+            <if test="pojo.title != null"> title = #{pojo.title}, </if>
+            <if test="pojo.specialty != null"> specialty = #{pojo.specialty}, </if>
+            <if test="pojo.officePhone != null"> office_phone = #{pojo.officePhone}, </if>
+            <if test="pojo.email != null"> email = #{pojo.email}, </if>
+            <if test="pojo.fax != null"> fax = #{pojo.fax}, </if>
+            <if test="pojo.mobilePhone != null"> mobile_phone = #{pojo.mobilePhone}, </if>
+            <if test="pojo.homePhone != null"> home_phone = #{pojo.homePhone}, </if>
+            <if test="pojo.homeAddr != null"> home_addr = #{pojo.homeAddr}, </if>
+            <if test="pojo.changeDate != null"> change_date = #{pojo.changeDate}, </if>
+            <if test="pojo.partInInciHandling != null"> part_in_inci_handling = #{pojo.partInInciHandling} </if>
+        </set>
+        WHERE expert_id = #{pojo.expertId}
+    </update>
+
+<!--auto generated by codehelper on 2017-05-23 14:20:13-->
+    <delete id="deleteByExpertId">
+        delete from em_park_expert
+        where expert_id=#{expertId}
+    </delete>
+</mapper>
+

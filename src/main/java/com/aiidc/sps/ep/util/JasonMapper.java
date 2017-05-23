@@ -1,4 +1,4 @@
-package com.aiidc.sps.ep.utils;
+package com.aiidc.sps.ep.util;
 
 import tk.mybatis.mapper.common.Mapper;
 

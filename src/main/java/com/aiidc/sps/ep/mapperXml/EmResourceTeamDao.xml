@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.aiidc.sps.ep.mapper.EmResourceTeamMapper">
+    <!--auto generated Code-->
+    <resultMap id="AllColumnMap" type="com.aiidc.sps.ep.entity.EmResourceTeam">
+        <result column="team_id" property="teamId"/>
+        <result column="company_id" property="companyId"/>
+        <result column="team_name" property="teamName"/>
+        <result column="team_addr" property="teamAddr"/>
+        <result column="area_id" property="areaId"/>
+        <result column="team_type_id" property="teamTypeId"/>
+        <result column="team_level_id" property="teamLevelId"/>
+        <result column="event_type_id" property="eventTypeId"/>
+        <result column="create_time" property="createTime"/>
+        <result column="qualifications" property="qualifications"/>
+        <result column="qualifications_num" property="qualificationsNum"/>
+        <result column="people_num" property="peopleNum"/>
+        <result column="funding_sources" property="fundingSources"/>
+        <result column="squadron_num" property="squadronNum"/>
+        <result column="team_num" property="teamNum"/>
+        <result column="expertise" property="expertise"/>
+        <result column="main_material" property="mainMaterial"/>
+        <result column="team_head" property="teamHead"/>
+        <result column="leader" property="leader"/>
+        <result column="head_tel" property="headTel"/>
+        <result column="leader_tel" property="leaderTel"/>
+        <result column="head_mobile" property="headMobile"/>
+        <result column="leader_mobile" property="leaderMobile"/>
+        <result column="duty_tel" property="dutyTel"/>
+        <result column="duty_fax" property="dutyFax"/>
+    </resultMap>
+
+    <!--auto generated Code-->
+    <sql id="all_column">
+        team_id,
+        company_id,
+        team_name,
+        team_addr,
+        area_id,
+        team_type_id,
+        team_level_id,
+        event_type_id,
+        create_time,
+        qualifications,
+        qualifications_num,
+        people_num,
+        funding_sources,
+        squadron_num,
+        team_num,
+        expertise,
+        main_material,
+        team_head,
+        leader,
+        head_tel,
+        leader_tel,
+        head_mobile,
+        leader_mobile,
+        duty_tel,
+        duty_fax
+    </sql>
+
+    <!--auto generated Code-->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="pojo.teamId">
+        INSERT INTO em_resource_team (
+            team_id,
+            company_id,
+            team_name,
+            team_addr,
+            area_id,
+            team_type_id,
+            team_level_id,
+            event_type_id,
+            create_time,
+            qualifications,
+            qualifications_num,
+            people_num,
+            funding_sources,
+            squadron_num,
+            team_num,
+            expertise,
+            main_material,
+            team_head,
+            leader,
+            head_tel,
+            leader_tel,
+            head_mobile,
+            leader_mobile,
+            duty_tel,
+            duty_fax
+        ) VALUES (
+            #{pojo.teamId,jdbcType=VARCHAR},
+            #{pojo.companyId},
+            #{pojo.teamName},
+            #{pojo.teamAddr},
+            #{pojo.areaId},
+            #{pojo.teamTypeId},
+            #{pojo.teamLevelId},
+            #{pojo.eventTypeId},
+            #{pojo.createTime},
+            #{pojo.qualifications},
+            #{pojo.qualificationsNum},
+            #{pojo.peopleNum},
+            #{pojo.fundingSources},
+            #{pojo.squadronNum},
+            #{pojo.teamNum},
+            #{pojo.expertise},
+            #{pojo.mainMaterial},
+            #{pojo.teamHead},
+            #{pojo.leader},
+            #{pojo.headTel},
+            #{pojo.leaderTel},
+            #{pojo.headMobile},
+            #{pojo.leaderMobile},
+            #{pojo.dutyTel},
+            #{pojo.dutyFax}
+        )
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertSelective" useGeneratedKeys="true" keyProperty="pojo.teamId">
+        INSERT INTO em_resource_team
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.teamId!=null"> team_id,</if>
+            <if test="pojo.companyId!=null"> company_id,</if>
+            <if test="pojo.teamName!=null"> team_name,</if>
+            <if test="pojo.teamAddr!=null"> team_addr,</if>
+            <if test="pojo.areaId!=null"> area_id,</if>
+            <if test="pojo.teamTypeId!=null"> team_type_id,</if>
+            <if test="pojo.teamLevelId!=null"> team_level_id,</if>
+            <if test="pojo.eventTypeId!=null"> event_type_id,</if>
+            <if test="pojo.createTime!=null"> create_time,</if>
+            <if test="pojo.qualifications!=null"> qualifications,</if>
+            <if test="pojo.qualificationsNum!=null"> qualifications_num,</if>
+            <if test="pojo.peopleNum!=null"> people_num,</if>
+            <if test="pojo.fundingSources!=null"> funding_sources,</if>
+            <if test="pojo.squadronNum!=null"> squadron_num,</if>
+            <if test="pojo.teamNum!=null"> team_num,</if>
+            <if test="pojo.expertise!=null"> expertise,</if>
+            <if test="pojo.mainMaterial!=null"> main_material,</if>
+            <if test="pojo.teamHead!=null"> team_head,</if>
+            <if test="pojo.leader!=null"> leader,</if>
+            <if test="pojo.headTel!=null"> head_tel,</if>
+            <if test="pojo.leaderTel!=null"> leader_tel,</if>
+            <if test="pojo.headMobile!=null"> head_mobile,</if>
+            <if test="pojo.leaderMobile!=null"> leader_mobile,</if>
+            <if test="pojo.dutyTel!=null"> duty_tel,</if>
+            <if test="pojo.dutyFax!=null"> duty_fax,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.teamId!=null">#{pojo.teamId,jdbcType=VARCHAR},</if>
+            <if test="pojo.companyId!=null">#{pojo.companyId},</if>
+            <if test="pojo.teamName!=null">#{pojo.teamName},</if>
+            <if test="pojo.teamAddr!=null">#{pojo.teamAddr},</if>
+            <if test="pojo.areaId!=null">#{pojo.areaId},</if>
+            <if test="pojo.teamTypeId!=null">#{pojo.teamTypeId},</if>
+            <if test="pojo.teamLevelId!=null">#{pojo.teamLevelId},</if>
+            <if test="pojo.eventTypeId!=null">#{pojo.eventTypeId},</if>
+            <if test="pojo.createTime!=null">#{pojo.createTime},</if>
+            <if test="pojo.qualifications!=null">#{pojo.qualifications},</if>
+            <if test="pojo.qualificationsNum!=null">#{pojo.qualificationsNum},</if>
+            <if test="pojo.peopleNum!=null">#{pojo.peopleNum},</if>
+            <if test="pojo.fundingSources!=null">#{pojo.fundingSources},</if>
+            <if test="pojo.squadronNum!=null">#{pojo.squadronNum},</if>
+            <if test="pojo.teamNum!=null">#{pojo.teamNum},</if>
+            <if test="pojo.expertise!=null">#{pojo.expertise},</if>
+            <if test="pojo.mainMaterial!=null">#{pojo.mainMaterial},</if>
+            <if test="pojo.teamHead!=null">#{pojo.teamHead},</if>
+            <if test="pojo.leader!=null">#{pojo.leader},</if>
+            <if test="pojo.headTel!=null">#{pojo.headTel},</if>
+            <if test="pojo.leaderTel!=null">#{pojo.leaderTel},</if>
+            <if test="pojo.headMobile!=null">#{pojo.headMobile},</if>
+            <if test="pojo.leaderMobile!=null">#{pojo.leaderMobile},</if>
+            <if test="pojo.dutyTel!=null">#{pojo.dutyTel},</if>
+            <if test="pojo.dutyFax!=null">#{pojo.dutyFax},</if>
+        </trim>
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertList">
+        INSERT ALL
+        <foreach collection="pojos" item="pojo">
+            INTO em_resource_team (
+            <include refid="all_column"/>
+            )VALUES(
+                #{pojo.teamId,jdbcType=VARCHAR},
+                #{pojo.companyId},
+                #{pojo.teamName},
+                #{pojo.teamAddr},
+                #{pojo.areaId},
+                #{pojo.teamTypeId},
+                #{pojo.teamLevelId},
+                #{pojo.eventTypeId},
+                #{pojo.createTime},
+                #{pojo.qualifications},
+                #{pojo.qualificationsNum},
+                #{pojo.peopleNum},
+                #{pojo.fundingSources},
+                #{pojo.squadronNum},
+                #{pojo.teamNum},
+                #{pojo.expertise},
+                #{pojo.mainMaterial},
+                #{pojo.teamHead},
+                #{pojo.leader},
+                #{pojo.headTel},
+                #{pojo.leaderTel},
+                #{pojo.headMobile},
+                #{pojo.leaderMobile},
+                #{pojo.dutyTel},
+                #{pojo.dutyFax}
+            )
+        </foreach>
+        select * from dual
+    </insert>
+
+    <!--auto generated Code-->
+    <update id="update">
+        UPDATE em_resource_team
+        <set>
+            <if test="pojo.teamId != null"> team_id = #{pojo.teamId}, </if>
+            <if test="pojo.companyId != null"> company_id = #{pojo.companyId}, </if>
+            <if test="pojo.teamName != null"> team_name = #{pojo.teamName}, </if>
+            <if test="pojo.teamAddr != null"> team_addr = #{pojo.teamAddr}, </if>
+            <if test="pojo.areaId != null"> area_id = #{pojo.areaId}, </if>
+            <if test="pojo.teamTypeId != null"> team_type_id = #{pojo.teamTypeId}, </if>
+            <if test="pojo.teamLevelId != null"> team_level_id = #{pojo.teamLevelId}, </if>
+            <if test="pojo.eventTypeId != null"> event_type_id = #{pojo.eventTypeId}, </if>
+            <if test="pojo.createTime != null"> create_time = #{pojo.createTime}, </if>
+            <if test="pojo.qualifications != null"> qualifications = #{pojo.qualifications}, </if>
+            <if test="pojo.qualificationsNum != null"> qualifications_num = #{pojo.qualificationsNum}, </if>
+            <if test="pojo.peopleNum != null"> people_num = #{pojo.peopleNum}, </if>
+            <if test="pojo.fundingSources != null"> funding_sources = #{pojo.fundingSources}, </if>
+            <if test="pojo.squadronNum != null"> squadron_num = #{pojo.squadronNum}, </if>
+            <if test="pojo.teamNum != null"> team_num = #{pojo.teamNum}, </if>
+            <if test="pojo.expertise != null"> expertise = #{pojo.expertise}, </if>
+            <if test="pojo.mainMaterial != null"> main_material = #{pojo.mainMaterial}, </if>
+            <if test="pojo.teamHead != null"> team_head = #{pojo.teamHead}, </if>
+            <if test="pojo.leader != null"> leader = #{pojo.leader}, </if>
+            <if test="pojo.headTel != null"> head_tel = #{pojo.headTel}, </if>
+            <if test="pojo.leaderTel != null"> leader_tel = #{pojo.leaderTel}, </if>
+            <if test="pojo.headMobile != null"> head_mobile = #{pojo.headMobile}, </if>
+            <if test="pojo.leaderMobile != null"> leader_mobile = #{pojo.leaderMobile}, </if>
+            <if test="pojo.dutyTel != null"> duty_tel = #{pojo.dutyTel}, </if>
+            <if test="pojo.dutyFax != null"> duty_fax = #{pojo.dutyFax} </if>
+        </set>
+        WHERE team_id = #{pojo.teamId}
+    </update>
+</mapper>
+

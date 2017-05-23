@@ -1,14 +1,16 @@
 package com.aiidc.sps.ep.entity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Table;
+import java.util.Date;
 
 @Table(name = "SPSUSER.EM_RESOURCE_CONTACTS")
 public class EmResourceContacts {
     @Column(name = "COMPANY_ID")
     private String companyId;
 
-    @Column(name = "CONTACTS_ID")
-    private String contactsId;
+    @Column(name = "COMPANY_NAME")
+    private String companyName;
 
     @Column(name = "DEPARTMENT")
     private String department;
@@ -40,6 +42,9 @@ public class EmResourceContacts {
     @Column(name = "QQ")
     private String qq;
 
+    @Column(name = "EDIT_TIME")
+    private Date editTime;
+
     /**
      * @return COMPANY_ID
      */
@@ -55,17 +60,17 @@ public class EmResourceContacts {
     }
 
     /**
-     * @return CONTACTS_ID
+     * @return COMPANY_NAME
      */
-    public String getContactsId() {
-        return contactsId;
+    public String getCompanyName() {
+        return companyName;
     }
 
     /**
-     * @param contactsId
+     * @param companyName
      */
-    public void setContactsId(String contactsId) {
-        this.contactsId = contactsId;
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
     }
 
     /**
@@ -206,5 +211,19 @@ public class EmResourceContacts {
      */
     public void setQq(String qq) {
         this.qq = qq;
+    }
+
+    /**
+     * @return EDIT_TIME
+     */
+    public Date getEditTime() {
+        return editTime;
+    }
+
+    /**
+     * @param editTime
+     */
+    public void setEditTime(Date editTime) {
+        this.editTime = editTime;
     }
 }

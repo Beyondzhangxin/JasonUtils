@@ -1,5 +1,6 @@
 package com.aiidc.sps.ep.entity;
 
+import java.util.Date;
 import javax.persistence.*;
 
 @Table(name = "SPSUSER.EM_RESPONSE_PLAN")
@@ -18,6 +19,9 @@ public class EmResponsePlan {
 
     @Column(name = "USAGE_SCOPE")
     private String usageScope;
+
+    @Column(name = "REPORTING_TIME")
+    private Date reportingTime;
 
     @Column(name = "PLAN_CONTENT")
     private String planContent;
@@ -90,6 +94,20 @@ public class EmResponsePlan {
      */
     public void setUsageScope(String usageScope) {
         this.usageScope = usageScope;
+    }
+
+    /**
+     * @return REPORTING_TIME
+     */
+    public Date getReportingTime() {
+        return reportingTime;
+    }
+
+    /**
+     * @param reportingTime
+     */
+    public void setReportingTime(Date reportingTime) {
+        this.reportingTime = reportingTime;
     }
 
     /**

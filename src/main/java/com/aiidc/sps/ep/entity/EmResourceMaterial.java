@@ -1,8 +1,7 @@
 package com.aiidc.sps.ep.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Table;
 import java.util.Date;
+import javax.persistence.*;
 
 @Table(name = "SPSUSER.EM_RESOURCE_MATERIAL")
 public class EmResourceMaterial {

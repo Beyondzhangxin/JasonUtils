@@ -5,8 +5,12 @@ import javax.persistence.*;
 
 @Table(name = "SPSUSER.EM_PARK_IMPORTANT_LIBRARY")
 public class EmParkImportantLibrary {
-    @Column(name = "NAME")
-    private String name;
+    @Id
+    @Column(name = "FILE_ID")
+    private Integer fileId;
+
+    @Column(name = "FILE_NAME")
+    private String fileName;
 
     @Column(name = "FILE_SIZE")
     private Long fileSize;
@@ -17,24 +21,35 @@ public class EmParkImportantLibrary {
     @Column(name = "UPLOAD_DATE")
     private Date uploadDate;
 
-    @Column(name = "PATH")
-    private String path;
-
-    @Column(name = "URL")
-    private String url;
+    @Column(name = "CONTENT")
+    private byte[] content;
 
     /**
-     * @return NAME
+     * @return FILE_ID
      */
-    public String getName() {
-        return name;
+    public Integer getFileId() {
+        return fileId;
     }
 
     /**
-     * @param name
+     * @param fileId
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setFileId(Integer fileId) {
+        this.fileId = fileId;
+    }
+
+    /**
+     * @return FILE_NAME
+     */
+    public String getFileName() {
+        return fileName;
+    }
+
+    /**
+     * @param fileName
+     */
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 
     /**
@@ -80,30 +95,16 @@ public class EmParkImportantLibrary {
     }
 
     /**
-     * @return PATH
+     * @return CONTENT
      */
-    public String getPath() {
-        return path;
+    public byte[] getContent() {
+        return content;
     }
 
     /**
-     * @param path
+     * @param content
      */
-    public void setPath(String path) {
-        this.path = path;
-    }
-
-    /**
-     * @return URL
-     */
-    public String getUrl() {
-        return url;
-    }
-
-    /**
-     * @param url
-     */
-    public void setUrl(String url) {
-        this.url = url;
+    public void setContent(byte[] content) {
+        this.content = content;
     }
 }

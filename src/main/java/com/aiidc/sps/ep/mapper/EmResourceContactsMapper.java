@@ -1,7 +1,12 @@
 package com.aiidc.sps.ep.mapper;
 
 import com.aiidc.sps.ep.entity.EmResourceContacts;
-import com.aiidc.sps.ep.utils.JasonMapper;
+import com.aiidc.sps.ep.util.JasonMapper;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.type.JdbcType;
 
 public interface EmResourceContactsMapper extends JasonMapper<EmResourceContacts> {
 }
