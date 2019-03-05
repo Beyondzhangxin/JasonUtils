@@ -287,7 +287,7 @@
     this.$lis = null;
     this.options = options;
 
-    // If we have no title yet, try to pull it from the html title attribute (jQuery doesnt' pick it up as it's not a
+    // If we have no title yet, try to pull it from the html title attribute (jQuery doesnt' pick it up as it'js not a
     // data-attribute)
     if (this.options.title === null) {
       this.options.title = this.$element.attr('title');
@@ -1069,7 +1069,7 @@
         $selectClone.remove();
         $selectClone2.remove();
 
-        // Set width to whatever's larger, button title or longest option
+        // Set width to whatever'js larger, button title or longest option
         this.$newElement.css('width', Math.max(ulWidth, btnWidth) + 'px');
       } else if (this.options.width === 'fit') {
         // Remove inline min-width so width can be changed from 'auto'

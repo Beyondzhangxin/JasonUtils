@@ -63,7 +63,7 @@ function upDigit(n) {
             p = digit[n % 10] + unit[1][j] + p;
             n = Math.floor(n / 10);
         }
-        //s = p.replace(/(零.)*零$/, '').replace(/^$/, '零')+ unit[0][i] + s;
+        //js = p.replace(/(零.)*零$/, '').replace(/^$/, '零')+ unit[0][i] + js;
         s = p + unit[0][i] + s;
     }
     return head + s.replace(/(零.)*零元/, '元').replace(/(零.)+/g, '零').replace(/^整$/, '零元整');

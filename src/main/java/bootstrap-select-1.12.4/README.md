@@ -11,7 +11,7 @@ bootstrap-select
 [![Dependency Status](https://david-dm.org/silviomoreto/bootstrap-select.svg)](https://david-dm.org/silviomoreto/bootstrap-select)
 [![devDependency Status](https://david-dm.org/silviomoreto/bootstrap-select/dev-status.svg)](https://david-dm.org/silviomoreto/bootstrap-select#info=devDependencies)
 
-Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements.
+Bootstrap-select is a jQuery plugin that utilizes Bootstrap'js dropdown.js to style and bring additional functionality to standard select elements.
 
 <a href="http://silviomoreto.github.io/bootstrap-select/"><img src="https://cloud.githubusercontent.com/assets/2874325/18023324/42cf556c-6bb5-11e6-84ce-35be08ae57ba.gif" alt="bootstrap-select demo"></a>
 
@@ -19,7 +19,7 @@ Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to sty
 
 You can view a live demo and some examples of how to use the various options [here](http://silviomoreto.github.io/bootstrap-select).
 
-Bootstrap-select's documentation, included in this repo in the root directory, is built with MkDocs and publicly hosted on GitHub Pages at http://silviomoreto.github.io/bootstrap-select. The documentation may also be run locally.
+Bootstrap-select'js documentation, included in this repo in the root directory, is built with MkDocs and publicly hosted on GitHub Pages at http://silviomoreto.github.io/bootstrap-select. The documentation may also be run locally.
 
 
 ### Running documentation locally
@@ -49,7 +49,7 @@ Create your `<select>` with the `.selectpicker` class.
 </select>
 ```
 
-If you use a 1.6.3 or newer, you don't need to do anything else, as the data-api automatically picks up the `<select>`s with the `selectpicker` class.
+If you use a 1.6.3 or newer, you don't need to do anything else, as the data-api automatically picks up the `<select>`js with the `selectpicker` class.
 
 If you use an older version, you need to add the following either at the bottom of the page (after the last selectpicker), or in a [`$(document).ready()`](http://api.jquery.com/ready/) block.
 ```js

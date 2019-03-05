@@ -57,7 +57,7 @@ $('.selectpicker').selectpicker('render');
 
 #### `.selectpicker('mobile')`
 
-Enable mobile scrolling by calling `$('.selectpicker').selectpicker('mobile')`. This enables the device's native menu for select menus.
+Enable mobile scrolling by calling `$('.selectpicker').selectpicker('mobile')`. This enables the device'js native menu for select menus.
 
 The method for detecting the browser is left up to the user.
 

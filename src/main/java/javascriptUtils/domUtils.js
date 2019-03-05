@@ -18,7 +18,7 @@ function addClass(obj, classStr) {
 //删除类名
 function removeClass(obj, classStr) {
     if (this.hasClass(obj, classStr)) {
-        var reg = new RegExp('(\\s|^)' + classStr + '(\\s|$)');
+        var reg = new RegExp('(\\js|^)' + classStr + '(\\js|$)');
         obj.className = obj.className.replace(reg, '');
     }
 }

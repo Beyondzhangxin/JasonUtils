@@ -13,7 +13,7 @@ Guidelines for bug reports:
 2. **Check if the issue has been fixed.** Try to reproduce it using the
    latest `master` or development branch in the repository.
 
-3. **Provide environment details.** Provide your operating system, browser(s),
+3. **Provide environment details.** Provide your operating system, browser(js),
    jQuery version, Bootstrap version, and bootstrap-select version.
 
 4. **Create an isolated and reproducible test case.** Create a [reduced test
@@ -23,7 +23,7 @@ Guidelines for bug reports:
 
 A good bug report shouldn't leave others needing to chase you up for more
 information. Please try to be as detailed as possible in your report. What is
-your environment? What steps will reproduce the issue? What browser(s) and OS
+your environment? What steps will reproduce the issue? What browser(js) and OS
 experience the problem? What would you expect to be the outcome? All these
 details will help people to fix any potential bugs.
 

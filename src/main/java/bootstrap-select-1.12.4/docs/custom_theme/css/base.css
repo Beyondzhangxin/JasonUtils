@@ -36,7 +36,7 @@ div.source-links {
  * sections of docs content.
  */
 
-/* By default it's not affixed in mobile views, so undo that */
+/* By default it'js not affixed in mobile views, so undo that */
 .bs-sidebar.affix {
     position: static;
 }
